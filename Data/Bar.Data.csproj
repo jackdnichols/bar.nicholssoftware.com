@@ -1,0 +1,228 @@
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{930FA839-B6D9-4EE1-A005-EB8B95AE269F}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Bar.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <AssemblyOriginatorKeyFile></AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Bar.Data</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    
+    <Reference Include="System">
+	<Name>System</Name>
+</Reference>
+
+<Reference Include="System.Configuration">
+	<Name>System.Configuration</Name>
+</Reference>
+
+<Reference Include="System.Core">
+	<Name>System.Core</Name>
+</Reference>
+
+<Reference Include="System.Data">
+	<Name>System.Data</Name>
+</Reference>
+
+<Reference Include="System.Transactions">
+	<Name>System.Transactions</Name>
+</Reference>
+
+<Reference Include="System.Runtime.Serialization">
+	<Name>System.Runtime.Serialization</Name>
+</Reference>
+
+<Reference Include="System.Xml">
+	<Name>System.Xml</Name>
+</Reference>
+
+
+  </ItemGroup>  
+  <ItemGroup>
+    <Compile Include="Generated\Companys.cs">
+</Compile>
+
+<Compile Include="Generated\DataProvider.cs">
+</Compile>
+
+<Compile Include="Generated\DbStatementResultSetInfoProvider.cs">
+</Compile>
+
+<Compile Include="Generated\Exception_Log.cs">
+</Compile>
+
+<Compile Include="Generated\FullTextUtil.cs">
+</Compile>
+
+<Compile Include="Generated\ProcedureStorageLocationProvider.cs">
+</Compile>
+
+<Compile Include="Generated\Roles.cs">
+</Compile>
+
+<Compile Include="Generated\Site_LogIns.cs">
+</Compile>
+
+<Compile Include="Generated\System_Users.cs">
+</Compile>
+
+<Compile Include="Generated\System_User_Roles.cs">
+</Compile>
+
+<Compile Include="Generated\Durable\ApplicationManager.cs">
+</Compile>
+
+<Compile Include="Generated\Durable\CollectionSortInfo.cs">
+</Compile>
+
+<Compile Include="Generated\Durable\CommonDataProviderBase.cs">
+</Compile>
+
+<Compile Include="Generated\Durable\CommonDbType.cs">
+</Compile>
+
+<Compile Include="Generated\Durable\DataProvider.cs">
+</Compile>
+
+<Compile Include="Generated\Durable\DbStatementModificationManager.cs">
+</Compile>
+
+<Compile Include="Generated\Durable\DbStatementModifierBase.cs">
+</Compile>
+
+<Compile Include="Generated\Durable\DbStatementResultSetInfo.cs">
+</Compile>
+
+<Compile Include="Generated\Durable\DbStatementResultSetInfoProvider.cs">
+</Compile>
+
+<Compile Include="Generated\Durable\DbStatementSortingModifier.cs">
+</Compile>
+
+<Compile Include="Generated\Durable\Delegates.cs">
+</Compile>
+
+<Compile Include="Generated\Durable\FieldSortInfo.cs">
+</Compile>
+
+<Compile Include="Generated\Durable\MultiResultset.cs">
+</Compile>
+
+<Compile Include="Generated\Durable\ProcedureStorageLocationProvider.cs">
+</Compile>
+
+<Compile Include="Generated\Durable\ProcedureStorageLocationType.cs">
+</Compile>
+
+<Compile Include="Generated\Durable\SpecificDataProviderBase.cs">
+</Compile>
+
+<Compile Include="Generated\Durable\StatementModificationInfo.cs">
+</Compile>
+
+<Compile Include="Generated\Durable\TransactionBoundConnectionManager.cs">
+</Compile>
+
+<Compile Include="Generated\Durable\VirtualStoredProcedures.cs">
+</Compile>
+
+<Compile Include="Properties\AssemblyInfo.cs">
+</Compile>
+
+<Content Include="C:\Users\jack\AppData\Roaming\Tech-IS\OxyGenCode\Datastore\Output\E6F249BB\DataEntityClasses\ReadMe.txt">
+</Content>
+
+    
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
