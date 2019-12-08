@@ -86,3 +86,16 @@ E:\Projects\bar.nicholssoftware.com\bar.nicholssoftware.com\obj\Debug\bar.nichol
 E:\Projects\bar.nicholssoftware.com\bar.nicholssoftware.com\obj\Debug\bar.nicholssoftware.com.csproj.CopyComplete
 E:\Projects\bar.nicholssoftware.com\bar.nicholssoftware.com\obj\Debug\bar.nicholssoftware.com.dll
 E:\Projects\bar.nicholssoftware.com\bar.nicholssoftware.com\obj\Debug\bar.nicholssoftware.com.pdb
+E:\Projects\bar.nicholssoftware.com\bar.nicholssoftware.com\bin\Microsoft.AspNet.SignalR.Core.dll
+E:\Projects\bar.nicholssoftware.com\bar.nicholssoftware.com\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+E:\Projects\bar.nicholssoftware.com\bar.nicholssoftware.com\bin\Microsoft.Owin.dll
+E:\Projects\bar.nicholssoftware.com\bar.nicholssoftware.com\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Projects\bar.nicholssoftware.com\bar.nicholssoftware.com\bin\Microsoft.Owin.Security.dll
+E:\Projects\bar.nicholssoftware.com\bar.nicholssoftware.com\bin\Owin.dll
+E:\Projects\bar.nicholssoftware.com\bar.nicholssoftware.com\bin\Microsoft.AspNet.SignalR.Core.pdb
+E:\Projects\bar.nicholssoftware.com\bar.nicholssoftware.com\bin\Microsoft.AspNet.SignalR.Core.xml
+E:\Projects\bar.nicholssoftware.com\bar.nicholssoftware.com\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+E:\Projects\bar.nicholssoftware.com\bar.nicholssoftware.com\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+E:\Projects\bar.nicholssoftware.com\bar.nicholssoftware.com\bin\Microsoft.Owin.xml
+E:\Projects\bar.nicholssoftware.com\bar.nicholssoftware.com\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Projects\bar.nicholssoftware.com\bar.nicholssoftware.com\bin\Microsoft.Owin.Security.xml
