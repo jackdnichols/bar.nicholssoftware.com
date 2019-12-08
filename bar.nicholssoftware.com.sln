@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29418.71
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bar.nicholssoftware.com", "bar.nicholssoftware.com\bar.nicholssoftware.com.csproj", "{238A0EDE-7CB6-45C0-84B1-85B51341E20E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bar.Data", "Data\Bar.Data.csproj", "{930FA839-B6D9-4EE1-A005-EB8B95AE269F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bar.Business", "Business\Bar.Business.csproj", "{298B7F05-328D-4527-BD43-8C945538D5B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{238A0EDE-7CB6-45C0-84B1-85B51341E20E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{238A0EDE-7CB6-45C0-84B1-85B51341E20E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{238A0EDE-7CB6-45C0-84B1-85B51341E20E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{930FA839-B6D9-4EE1-A005-EB8B95AE269F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{930FA839-B6D9-4EE1-A005-EB8B95AE269F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{930FA839-B6D9-4EE1-A005-EB8B95AE269F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{930FA839-B6D9-4EE1-A005-EB8B95AE269F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{298B7F05-328D-4527-BD43-8C945538D5B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{298B7F05-328D-4527-BD43-8C945538D5B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{298B7F05-328D-4527-BD43-8C945538D5B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{298B7F05-328D-4527-BD43-8C945538D5B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
