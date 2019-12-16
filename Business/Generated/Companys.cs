@@ -701,9 +701,33 @@ namespace Bar.Business
 
             return totalCount;
         }
-        #endregion 
 
-   }
+        public static List<Companys> GetCompanysByCompany_Name(String company_Name)
+        {
+
+            List<Bar.Data.Companys> dataEntityCollection = OxyData.Data.DataProvider<Bar.Data.DataProvider>.Current.GetCompanyByCompanyName(company_Name);
+
+            List<Companys> businessEntityCollection = null;
+            if (dataEntityCollection != null)
+            {
+                businessEntityCollection = new List<Bar.Business.Companys>(dataEntityCollection.Count);
+                foreach (Bar.Data.Companys val in dataEntityCollection)
+                {
+                    businessEntityCollection.Add(new Bar.Business.Companys(val));
+                }
+
+            }
+            else
+            {
+                businessEntityCollection = new List<Bar.Business.Companys>(0);
+            }
+            return businessEntityCollection;
+
+        }
+
+        #endregion
+
+    }
 
 }
 

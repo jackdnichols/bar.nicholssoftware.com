@@ -102,6 +102,54 @@
                 <td>&nbsp;</td>
                 <td>@Html.TextBox("Company_Logo_Width")</td>
             </tr>
+            <tr>
+                <td colspan="3"><button class="form-control btn btn-info" id="saveCompany" type="submit">Save Company</button></td>
+            </tr>
         </table>
     </div>
 
+<script>
+    $('#saveCompany').click(function () {
+        saveCompany();
+    })
+    function saveCompany() {
+
+        var obj = {
+                ['Company_Id']: $('#Company_Id').val(),
+                ['Company_Name']: $('#Company_Name').val(),
+                ['Address']: $('#Address').val(),
+                ['City']: $('#City').val(),
+                ['State']: $('#State').val(),
+                ['Zip_Code']: $('#Zip_Code').val(),
+                ['Primary_Contact_First_Name']: $('#Primary_Contact_First_Name').val(),
+                ['Primary_Contact_Last_Name']: $('#Primary_Contact_Last_Name').val(),
+                ['Primary_Contact_Phone']: $('#Primary_Contact_Phone').val(),
+                ['Primary_Contact_Email_Address']: $('#Primary_Contact_Email_Address').val(),
+                ['Secondary_Contact_First_Name1']: $('#Secondary_Contact_First_Name1').val(),
+                ['Secondary_Contact_Last_Name1']: $('#Secondary_Contact_Last_Name1').val(),
+                ['Secondary_Contact_Phone1']: $('#Secondary_Contact_Phone1').val(),
+                ['Secondary_Contact_Email_Address1']: $('#Secondary_Contact_Email_Address1').val(),
+                ['Offers_Befefits_To_Different_Classes']: $('#Offers_Befefits_To_Different_Classes').val(),
+                ['Active']: $('#Active').val(),
+                ['Company_Logo']: $('#Company_Logo').val(),
+                ['Company_Logo_Height']: $('#Company_Logo_Height').val(),
+                ['Company_Logo_Width']: $('#Company_Logo_Width').val(),
+        };
+
+        $.ajax({
+            type: 'POST',
+            url: '/SignUp/SaveCompany/',
+            contentType: "application/json",
+            data: JSON.stringify(obj)
+        })
+        .done(function (data) {
+            gGrid.clear();
+            gGrid.rows.add(data);
+            gGrid.draw();
+
+        })
+        .fail(function (jqXhr, textStatus, errorThrown) {
+            console.log("ERROR: " + errorThrown);
+        });
+    }
+</script>
