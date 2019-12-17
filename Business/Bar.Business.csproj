@@ -152,10 +152,11 @@
     </Compile>
     <Compile Include="Generated\Durable\SQLStatementInfo.cs">
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs">
-    </Compile>
     <Content Include="C:\Users\jack\AppData\Roaming\Tech-IS\OxyGenCode\Datastore\Output\E6F249BB\BusinessEntityClasses\ReadMe.txt">
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

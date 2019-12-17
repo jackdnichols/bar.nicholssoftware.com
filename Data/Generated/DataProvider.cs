@@ -714,6 +714,76 @@ namespace Bar.Data
             FinalizeConnection(sqlcon, tran);
             LogDataActivity("InsertCompanys", "[dbo].[oSP_Insert_Companys]", rowsAffected, sqlcon, sps);
         }
+        
+        public List<Companys> GetCompanyByCompanyName(String company_Name)
+        {
+            return GetCompanyByCompanyName(company_Name, (DbTransaction)null);
+        }
+
+        public List<Companys> GetCompanyByCompanyName(String company_Name, DbTransaction tran)
+        {
+            List<Companys> dataList;
+            DbConnection sqlcon = InitializeConnection(tran);
+    
+            object[] inputValues = new object[] { company_Name };
+            DbParameter[] sps = new DbParameter[1];
+                        
+            sps[0] = GetDbParameter("@CompanyName", CommonDbType.String, 50);
+            sps[0].Value = inputValues[0];
+
+            DbDataReader dr = GetData(sqlcon, tran, "[dbo].[oSP_Select_Company_By_Company_Name]", sps);
+
+            dataList = new List<Bar.Data.Companys>();
+
+            int company_IdOrdinal = dr.GetOrdinal("Company_Id");
+            int company_NameOrdinal = dr.GetOrdinal("Company_Name");
+            int addressOrdinal = dr.GetOrdinal("Address");
+            int cityOrdinal = dr.GetOrdinal("City");
+            int stateOrdinal = dr.GetOrdinal("State");
+            int zip_CodeOrdinal = dr.GetOrdinal("Zip_Code");
+            int primary_Contact_First_NameOrdinal = dr.GetOrdinal("Primary_Contact_First_Name");
+            int primary_Contact_Last_NameOrdinal = dr.GetOrdinal("Primary_Contact_Last_Name");
+            int primary_Contact_PhoneOrdinal = dr.GetOrdinal("Primary_Contact_Phone");
+            int primary_Contact_Email_AddressOrdinal = dr.GetOrdinal("Primary_Contact_Email_Address");
+            int secondary_Contact_First_Name1Ordinal = dr.GetOrdinal("Secondary_Contact_First_Name1");
+            int secondary_Contact_Last_Name1Ordinal = dr.GetOrdinal("Secondary_Contact_Last_Name1");
+            int secondary_Contact_Phone1Ordinal = dr.GetOrdinal("Secondary_Contact_Phone1");
+            int secondary_Contact_Email_Address1Ordinal = dr.GetOrdinal("Secondary_Contact_Email_Address1");
+            int offers_Befefits_To_Different_ClassesOrdinal = dr.GetOrdinal("Offers_Befefits_To_Different_Classes");
+            int activeOrdinal = dr.GetOrdinal("Active");
+            int company_LogoOrdinal = dr.GetOrdinal("Company_Logo");
+            int company_Logo_HeightOrdinal = dr.GetOrdinal("Company_Logo_Height");
+            int company_Logo_WidthOrdinal = dr.GetOrdinal("Company_Logo_Width");
+
+            while (dr.Read())
+            {
+                dataList.Add(new Bar.Data.Companys(dr.GetInt32(company_IdOrdinal),
+                    dr.GetString(company_NameOrdinal),
+                    dr.GetString(addressOrdinal),
+                    dr.GetString(cityOrdinal),
+                    dr.GetString(stateOrdinal),
+                    dr.GetString(zip_CodeOrdinal),
+                    dr.GetString(primary_Contact_First_NameOrdinal),
+                    dr.GetString(primary_Contact_Last_NameOrdinal),
+                    dr.GetString(primary_Contact_PhoneOrdinal),
+                    dr.GetString(primary_Contact_Email_AddressOrdinal),
+                    dr.GetString(secondary_Contact_First_Name1Ordinal),
+                    dr.GetString(secondary_Contact_Last_Name1Ordinal),
+                    dr.GetString(secondary_Contact_Phone1Ordinal),
+                    dr.GetString(secondary_Contact_Email_Address1Ordinal),
+                    dr.GetBoolean(offers_Befefits_To_Different_ClassesOrdinal),
+                    dr.GetBoolean(activeOrdinal),
+                    dr.GetString(company_LogoOrdinal),
+                    dr.GetInt32(company_Logo_HeightOrdinal),
+                    dr.GetInt32(company_Logo_WidthOrdinal)));
+            }
+
+            dr.Close();
+            
+            FinalizeConnection(sqlcon, tran);
+            LogDataActivity("GetCompanys", "[dbo].[oSP_Select_Companys_All_Paged]", -1, sqlcon, sps);
+            return dataList;
+        }
 
         #endregion 
 

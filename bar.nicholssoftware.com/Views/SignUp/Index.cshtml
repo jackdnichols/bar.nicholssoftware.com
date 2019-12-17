@@ -1,0 +1,156 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Main_Layout.cshtml";
+}
+
+    <div>
+        <h2>Sign UP</h2>
+        <table>
+            <tr>
+                <td>Company_Id</td>
+                <td>&nbsp;</td>
+                <td>@Html.TextBox("Company_Id")</td>
+            </tr>
+            <tr>
+                <td>Company_Name</td>
+                <td>&nbsp;</td>
+                <td>@Html.TextBox("Company_Name")</td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td>&nbsp;</td>
+                <td>@Html.TextBox("Address")</td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td>&nbsp;</td>
+                <td>@Html.TextBox("City")</td>
+            </tr>
+            <tr>
+                <td>State</td>
+                <td>&nbsp;</td>
+                <td>@Html.TextBox("State")</td>
+            </tr>
+            <tr>
+                <td>Zip_Code</td>
+                <td>&nbsp;</td>
+                <td>@Html.TextBox("Zip_Code")</td>
+            </tr>
+            <tr>
+                <td>Primary_Contact_First_Name</td>
+                <td>&nbsp;</td>
+                <td>@Html.TextBox("Primary_Contact_First_Name")</td>
+            </tr>
+            <tr>
+                <td>Primary_Contact_Last_Name</td>
+                <td>&nbsp;</td>
+                <td>@Html.TextBox("Primary_Contact_Last_Name")</td>
+            </tr>
+            <tr>
+                <td>Primary_Contact_Phone</td>
+                <td>&nbsp;</td>
+                <td>@Html.TextBox("Primary_Contact_Phone")</td>
+            </tr>
+            <tr>
+                <td>Primary_Contact_Email_Address</td>
+                <td>&nbsp;</td>
+                <td>@Html.TextBox("Primary_Contact_Email_Address")</td>
+            </tr>
+            <tr>
+                <td>Secondary_Contact_First_Name1</td>
+                <td>&nbsp;</td>
+                <td>@Html.TextBox("Secondary_Contact_First_Name1")</td>
+            </tr>
+            <tr>
+                <td>Secondary_Contact_Last_Name1</td>
+                <td>&nbsp;</td>
+                <td>@Html.TextBox("Secondary_Contact_Last_Name1")</td>
+            </tr>
+            <tr>
+                <td>Secondary_Contact_Phone1</td>
+                <td>&nbsp;</td>
+                <td>@Html.TextBox("Secondary_Contact_Phone1")</td>
+            </tr>
+            <tr>
+                <td>Secondary_Contact_Email_Address1</td>
+                <td>&nbsp;</td>
+                <td>@Html.TextBox("Secondary_Contact_Email_Address1")</td>
+            </tr>
+            <tr>
+                <td>Offers_Befefits_To_Different_Classes</td>
+                <td>&nbsp;</td>
+                <td>@Html.TextBox("Offers_Befefits_To_Different_Classes")</td>
+            </tr>
+            <tr>
+                <td>Active</td>
+                <td>&nbsp;</td>
+                <td>@Html.TextBox("Active")</td>
+            </tr>
+            <tr>
+                <td>Company_Logo</td>
+                <td>&nbsp;</td>
+                <td>@Html.TextBox("Company_Logo")</td>
+            </tr>
+            <tr>
+                <td>Company_Logo_Height</td>
+                <td>&nbsp;</td>
+                <td>@Html.TextBox("Company_Logo_Height")</td>
+            </tr>
+            <tr>
+                <td>Company_Logo_Width</td>
+                <td>&nbsp;</td>
+                <td>@Html.TextBox("Company_Logo_Width")</td>
+            </tr>
+            <tr>
+                <td colspan="3"><button class="form-control btn btn-info" id="saveCompany" type="submit">Save Company</button></td>
+            </tr>
+        </table>
+    </div>
+
+<script>
+    $('#saveCompany').click(function () {
+        saveCompany();
+    })
+    function saveCompany() {
+
+        var obj = {
+                ['Company_Id']: $('#Company_Id').val(),
+                ['Company_Name']: $('#Company_Name').val(),
+                ['Address']: $('#Address').val(),
+                ['City']: $('#City').val(),
+                ['State']: $('#State').val(),
+                ['Zip_Code']: $('#Zip_Code').val(),
+                ['Primary_Contact_First_Name']: $('#Primary_Contact_First_Name').val(),
+                ['Primary_Contact_Last_Name']: $('#Primary_Contact_Last_Name').val(),
+                ['Primary_Contact_Phone']: $('#Primary_Contact_Phone').val(),
+                ['Primary_Contact_Email_Address']: $('#Primary_Contact_Email_Address').val(),
+                ['Secondary_Contact_First_Name1']: $('#Secondary_Contact_First_Name1').val(),
+                ['Secondary_Contact_Last_Name1']: $('#Secondary_Contact_Last_Name1').val(),
+                ['Secondary_Contact_Phone1']: $('#Secondary_Contact_Phone1').val(),
+                ['Secondary_Contact_Email_Address1']: $('#Secondary_Contact_Email_Address1').val(),
+                ['Offers_Befefits_To_Different_Classes']: $('#Offers_Befefits_To_Different_Classes').val(),
+                ['Active']: $('#Active').val(),
+                ['Company_Logo']: $('#Company_Logo').val(),
+                ['Company_Logo_Height']: $('#Company_Logo_Height').val(),
+                ['Company_Logo_Width']: $('#Company_Logo_Width').val(),
+        };
+
+        $.ajax({
+            type: 'POST',
+            url: '/SignUp/SaveCompany/',
+            contentType: "application/json",
+            data: JSON.stringify(obj)
+        })
+            .done(function (data) {
+                var len = data.length;
+                if (data == null || data.Company_Name == null) {    // error
+                     return;
+                }
+                alert(data.Company_Name);
+        })
+        .fail(function (jqXhr, textStatus, errorThrown) {
+            console.log("ERROR: " + errorThrown);
+        });
+    }
+</script>
