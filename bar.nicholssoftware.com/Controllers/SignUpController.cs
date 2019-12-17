@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Web.Script.Serialization;
 
 namespace bar.nicholssoftware.com.Controllers
 {
@@ -92,20 +93,22 @@ namespace bar.nicholssoftware.com.Controllers
         [Route("SaveCompany")]
         public JsonResult SaveCompany([System.Web.Http.FromBody] Bar.Business.Companys company)
         {
+            List<Bar.Business.Companys> companyList = null;
+
             if (company != null && !String.IsNullOrEmpty(company.Company_Name))
             {
-                List<Bar.Business.Companys> companyList = Bar.Business.Companys.GetCompanysByCompany_Name(company.Company_Name);
+                companyList = Bar.Business.Companys.GetCompanysByCompany_Name(company.Company_Name);
+                if (companyList != null && companyList.Count > 0)
+                {
+                    Bar.Business.Companys.Update(company);
+                }
+                else
+                {
+                    Bar.Business.Companys.Insert(company);
+                }
             }
 
-            //List<Bar.Business.Companys> rslt = await Bar.Business.Companys.Update(company);
-
-            //JsonResult r = new JsonResult(rslt)
-            //{
-            //    Value = rslt,
-            //    ContentType = "application/json"
-            //};
-            //return r;
-            return null;
+            return Json(companyList, JsonRequestBehavior.AllowGet);
         }
     }
 }

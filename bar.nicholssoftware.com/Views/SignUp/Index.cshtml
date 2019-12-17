@@ -142,11 +142,12 @@
             contentType: "application/json",
             data: JSON.stringify(obj)
         })
-        .done(function (data) {
-            gGrid.clear();
-            gGrid.rows.add(data);
-            gGrid.draw();
-
+            .done(function (data) {
+                var len = data.length;
+                if (data == null || data.Company_Name == null) {    // error
+                     return;
+                }
+                alert(data.Company_Name);
         })
         .fail(function (jqXhr, textStatus, errorThrown) {
             console.log("ERROR: " + errorThrown);
