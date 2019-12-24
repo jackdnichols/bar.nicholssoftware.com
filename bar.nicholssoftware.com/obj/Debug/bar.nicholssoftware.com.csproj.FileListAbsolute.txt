@@ -99,3 +99,7 @@ E:\Projects\bar.nicholssoftware.com\bar.nicholssoftware.com\bin\Microsoft.AspNet
 E:\Projects\bar.nicholssoftware.com\bar.nicholssoftware.com\bin\Microsoft.Owin.xml
 E:\Projects\bar.nicholssoftware.com\bar.nicholssoftware.com\bin\Microsoft.Owin.Host.SystemWeb.xml
 E:\Projects\bar.nicholssoftware.com\bar.nicholssoftware.com\bin\Microsoft.Owin.Security.xml
+E:\Projects\bar.nicholssoftware.com\bar.nicholssoftware.com\bin\Bar.Business.dll
+E:\Projects\bar.nicholssoftware.com\bar.nicholssoftware.com\bin\Bar.Data.dll
+E:\Projects\bar.nicholssoftware.com\bar.nicholssoftware.com\bin\Bar.Business.pdb
+E:\Projects\bar.nicholssoftware.com\bar.nicholssoftware.com\bin\Bar.Data.pdb
