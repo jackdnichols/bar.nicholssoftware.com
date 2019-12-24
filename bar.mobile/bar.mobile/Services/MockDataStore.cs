@@ -14,12 +14,12 @@ namespace bar.mobile.Services
         {
             items = new List<Item>()
             {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "First item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fourth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description." }
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Rusty Bucket Restaurant & Tavern", Description="42874 Woodward Ave MI. (248) 239-3663" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "D’Marcos Italian Restaurant and Wine Bar", Description="401 S Main St. MI. (248) 759-4951" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "X-Golf Rochester Hills", Description="1134 S Rochester Rd MI. (248) 759-4195" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Orion Sports Bar & Grill", Description="1172 S Lapeer Rd MI. (248) 693-3015" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Old Detroit Bar and Grille", Description="741 S Lapeer Rd MI. (248) 814-8109" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Wine Social", Description="135 S Broadway St MI. (248) 783-7111" }
             };
         }
 
