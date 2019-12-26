@@ -15,7 +15,7 @@ namespace bar.mobile.Converters
 
             try
             {
-                return new Uri("https://s3-media0.fl.yelpcdn.com/bphoto/-qYFoL7TuHTZ0PQjfREeAw/ls.jpg");
+                return new Uri(value.ToString());
             }
             catch(Exception ex)
             {
