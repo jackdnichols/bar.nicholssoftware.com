@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              x:Class="bar.mobile.Views.ItemsPage"
              Title="{Binding Title}"
-             xmlns:converter="clr-namespace:bar.mobile.Converters"
+             
              x:Name="BrowseItemsPage">
 
     <ContentPage.ToolbarItems>
@@ -18,13 +18,20 @@
             <Color x:Key="Primary">#2196F3</Color>
             <Color x:Key="Accent">#96d1ff</Color>
             <Color x:Key="LightTextColor">#999999</Color>
-            <converter:ImageConverter x:Key="localImageConverter"></converter:ImageConverter>
+            
         </ResourceDictionary>
     </ContentPage.Resources>
     
     <StackLayout>
         <Grid>
-            <Image Source="https://www.mechanicalengineershvac.com/images/sitegraphics/stock1.jpg"></Image>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            
+            <Image Grid.Row="0" Grid.Column="0" Source="https://www.mechanicalengineershvac.com/images/sitegraphics/stock1.jpg" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" ></Image>
         </Grid>
 
         <ListView x:Name="ItemsListView"
@@ -61,7 +68,10 @@
                                 <Image Source="{Binding ImageUrl, Converter={StaticResource localImageConverter}}" 
                                    VerticalOptions="Center" 
                                    HeightRequest="100"
-                                   Grid.Column="0"/>
+                                   WidthRequest="100"
+                                   Grid.Column="0"
+                                   Aspect="AspectFill"
+                                       />
                                 
                                 <StackLayout Padding="10" Grid.Column="1">
                                     <Label Text="{Binding Text}" 

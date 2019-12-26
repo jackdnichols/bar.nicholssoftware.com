@@ -15,7 +15,7 @@ namespace bar.mobile.Converters
 
             try
             {
-                return new Uri(value.ToString());
+                return ImageSource.FromUri(new Uri(value.ToString()));
             }
             catch(Exception ex)
             {
