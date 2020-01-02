@@ -6,13 +6,32 @@
              mc:Ignorable="d"
              x:Class="bar.mobile.Views.ItemsPage"
              Title="{Binding Title}"
+             
              x:Name="BrowseItemsPage">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add" Clicked="AddItem_Clicked" />
     </ContentPage.ToolbarItems>
-
+    
     <StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+                        
+            <!-- Local images load fine -->
+            <Image Grid.Row="1" 
+                   Source="xamarin_logo.png" 
+                   BackgroundColor="#96d1ff" 
+                   VerticalOptions="Center" 
+                   HeightRequest="64" 
+                   WidthRequest="200" />
+           
+            
+        </Grid>
         <ListView x:Name="ItemsListView"
                 ItemsSource="{Binding Items}"
                 VerticalOptions="FillAndExpand"
@@ -32,20 +51,43 @@
                     <x:String>Sixth Item</x:String>
                 </x:Array>
             </d:ListView.ItemsSource>
+
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
+
                         <StackLayout Padding="10">
-                            <Label Text="{Binding Text}" 
-                                d:Text="{Binding .}"
-                                LineBreakMode="NoWrap" 
-                                Style="{DynamicResource ListItemTextStyle}" 
-                                FontSize="16" />
-                            <Label Text="{Binding Description}" 
-                                d:Text="Item description"
-                                LineBreakMode="NoWrap"
-                                Style="{DynamicResource ListItemDetailTextStyle}"
-                                FontSize="13" />
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <Image Source="{Binding ImageUrl, Converter={StaticResource localImageConverter}}" 
+                                   VerticalOptions="Center" 
+                                   HeightRequest="100"
+                                   WidthRequest="100"
+                                   Grid.Column="0"
+                                   Aspect="AspectFill"
+                                   BackgroundColor="#c0c0c0"
+                                   IsVisible="True"
+                                       />
+                                
+                                <StackLayout Padding="10" Grid.Column="1">
+                                    <Label Text="{Binding Text}" 
+                                        d:Text="{Binding .}"
+                                        LineBreakMode="NoWrap" 
+                                        Style="{DynamicResource ListItemTextStyle}" 
+                                        FontSize="16"/>
+                            
+                                    <Label Text="{Binding Description}" 
+                                        d:Text="Item description"
+                                        LineBreakMode="NoWrap"
+                                        Style="{DynamicResource ListItemDetailTextStyle}"
+                                        FontSize="13"/>
+                                    
+                                </StackLayout>
+                            </Grid>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

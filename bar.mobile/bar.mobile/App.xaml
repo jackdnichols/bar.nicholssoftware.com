@@ -4,10 +4,15 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             xmlns:converter="clr-namespace:bar.mobile.Converters"
              x:Class="bar.mobile.App">
 
     <Application.Resources>
         <ResourceDictionary>
+            <!-- Global Converters-->
+            <converter:DoNothingConverter x:Key="localDoNothingConverter"></converter:DoNothingConverter>
+            <converter:ImageConverter x:Key="localImageConverter"></converter:ImageConverter>
+            
             <!--Global Styles-->
             <Color x:Key="NavigationPrimary">#2196F3</Color>
             <Style TargetType="NavigationPage">
