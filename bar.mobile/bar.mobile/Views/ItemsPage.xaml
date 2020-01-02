@@ -12,15 +12,6 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add" Clicked="AddItem_Clicked" />
     </ContentPage.ToolbarItems>
-
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <Color x:Key="Primary">#2196F3</Color>
-            <Color x:Key="Accent">#96d1ff</Color>
-            <Color x:Key="LightTextColor">#999999</Color>
-            
-        </ResourceDictionary>
-    </ContentPage.Resources>
     
     <StackLayout>
         <Grid>
@@ -30,10 +21,17 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"></ColumnDefinition>
             </Grid.ColumnDefinitions>
+                        
+            <!-- Local images load fine -->
+            <Image Grid.Row="1" 
+                   Source="xamarin_logo.png" 
+                   BackgroundColor="#96d1ff" 
+                   VerticalOptions="Center" 
+                   HeightRequest="64" 
+                   WidthRequest="200" />
+           
             
-            <Image Grid.Row="0" Grid.Column="0" Source="https://www.mechanicalengineershvac.com/images/sitegraphics/stock1.jpg" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" ></Image>
         </Grid>
-
         <ListView x:Name="ItemsListView"
                 ItemsSource="{Binding Items}"
                 VerticalOptions="FillAndExpand"
@@ -71,6 +69,8 @@
                                    WidthRequest="100"
                                    Grid.Column="0"
                                    Aspect="AspectFill"
+                                   BackgroundColor="#c0c0c0"
+                                   IsVisible="True"
                                        />
                                 
                                 <StackLayout Padding="10" Grid.Column="1">
